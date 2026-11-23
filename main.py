@@ -6,14 +6,12 @@ my_turtle = Turtle()
 screen = Screen()
 screen.title("Sketch")
 
-def go_up():
-    my_turtle.forward(10)
 
 def go_left():
     my_turtle.left(10)
 
 
-def go_down():
+def move():
     my_turtle.forward(10)
 
 def go_right():
@@ -30,9 +28,9 @@ button = Button(master=canvas.master, text="Clean", command=clear_screen)
 button.pack()
 
 
-screen.onkey(go_up, "Up")
+screen.onkey(move, "Up")
 screen.onkey(go_left, "Left")
-screen.onkey(go_down, "Down")
+screen.onkey(move, "Down")
 screen.onkey(go_right, "Right")
 
 
